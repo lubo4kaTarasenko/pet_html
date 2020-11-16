@@ -17,7 +17,11 @@ class PetHtml
   end
 
   def open_html
-    make_html
+    make_html    
     system("xdg-open pet_html.html")
+  end
+
+  def self.root
+    File.expand_path '..', __FILE__
   end
 end
