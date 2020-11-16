@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "return html page when play 'console pet game'"
   s.authors     = ["Libov Tarasenko"]
   s.email       = 'lubo4ka.boiko@gmail.com'
-  s.files       = ["lib/pet_html.rb"]
+  s.files       = ["lib/pet_html.rb", "lib/simple_html.rb", "lib/pet_html.html", "lib/index.html"]
   s.homepage    ='https://github.com/lubo4kaTarasenko'
   s.license       = 'MIT'
 end 

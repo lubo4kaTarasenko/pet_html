@@ -4,7 +4,7 @@ class PetHtml
   end
   
   def make_html
-    content = File.read("#{self.class.root}/../pet_html.html")
+    content = File.read("#{self.class.root}/pet_html.html")
     @html_new = "#{self.class.root}/pet_html_new.html"
     File.open(@html_new, 'w') {|f|
       content.gsub!('{{pet}}', @pet.class.to_s)
