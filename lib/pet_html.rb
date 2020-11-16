@@ -7,12 +7,13 @@ class PetHtml
     content = File.read("#{self.class.root}/../pet_html.html")
     @html_new = "#{self.class.root}/pet_html_new.html"
     File.open(@html_new, 'w') {|f|
-      f.puts content.gsub('{{name}}', @pet.name) 
-      f.puts content.gsub('{{response}}', @pet.response.join(',')) 
-      #f.puts content.gsub('{{mood}}', @pet.mood) 
-      #f.puts content.gsub('{{states}}', @pet.states) 
-      #f.puts content.gsub('{{number_of_lifes}}', @pet.lifes) 
-      #f.puts content.gsub('{{number_of_lifes}}', @pet.emoji)     
+      content.gsub!('{{pet}}', @pet.class.to_s)
+      content.gsub!('{{name}}', @pet.name) 
+      content.gsub!('{{states}}', @pet.states.join(',')) 
+      content.gsub!('{{number_of_lifes}}', @pet.lifes.to_s) 
+      content.gsub!('{{emoji}}', @pet.emoji) 
+      content.gsub!('{{response}}', @pet.response.join('<br>')) 
+      f.puts content    
     }
   end
 

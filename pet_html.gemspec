@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'pet_html'
-  s.version     = '0.0.3'
+  s.version     = '0.0.4'
   s.date        = '2020-11-16'
   s.summary     = "return html page when play 'console pet game'"
   s.description = "return html page when play 'console pet game'"
