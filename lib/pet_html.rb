@@ -18,6 +18,6 @@ class PetHtml
 
   def open_html
     make_html
-    system("xdg-open pet_html.htm")
+    system("xdg-open pet_html.html")
   end
 end
